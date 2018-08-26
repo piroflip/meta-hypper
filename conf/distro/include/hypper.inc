@@ -26,7 +26,7 @@ PREFERRED_PROVIDER_linux-libc-headers-nativesdk = "linux-libc-headers-nativesdk"
 require conf/distro/include/hypper-${TCLIBC}.inc
 
 #Set the default maintainer to hypper-dev
-MAINTAINER = ""
+MAINTAINER = "Alexander Kotov <kot@amicon.ru>"
 
 #use debian style naming
 INHERIT += "debian"
@@ -57,7 +57,7 @@ BUILDHISTORY_COMMIT = "1"
 #have a shared state a.k.a package-staging2
 INHERIT += "sstate"
 
-HYPPER_PKG_FORMAT ?= "deb"
+HYPPER_PKG_FORMAT ?= "ipk"
 require conf/distro/include/hypper-package-${HYPPER_PKG_FORMAT}.inc
 
 # MACHINE_KERNEL_PR if not defined can cause parsing failures
